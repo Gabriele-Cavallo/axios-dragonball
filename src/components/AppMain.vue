@@ -20,6 +20,8 @@
         <div class="row">
             <div class="col">
                 <div class="card-wrapper d-flex d-wrap algn-cntr jst-cntr">
+                    <!-- Per ogni elemento presente nell'array charactersList genero una card -->
+                    <!-- Passo tramite props le informazioni contenute in ogni elemento dell'array charactersList -->
                     <CharacterCard v-for="card in store.charactersList" :characterInfo = 'card'></CharacterCard>
                 </div>
             </div>

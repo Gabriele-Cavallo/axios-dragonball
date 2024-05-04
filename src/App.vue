@@ -17,6 +17,7 @@
             };
         },
         methods: {
+            // Chiamata axios all'API di dragonball-api.com
             getInfoFromApi() {
                 axios.get ('https://dragonball-api.com/api/characters')
                 .then ((response) => {

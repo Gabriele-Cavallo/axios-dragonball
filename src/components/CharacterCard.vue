@@ -13,6 +13,7 @@
 </script>
 
 <template>
+    <!-- Tramite le props ricevute da AppMain popolo le informazioni della card personaggio -->
     <div class="card d-flex">
         <div class="img-col anchor">
             <img :src="characterInfo.image" alt="character image">
