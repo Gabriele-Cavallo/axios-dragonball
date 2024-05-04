@@ -43,7 +43,9 @@
     .img-col{
         width: 50%;
         img{
-            height: 250px;
+            min-height: 300px;
+            max-height: 300px;
+            object-fit: contain;
             position: absolute;
             top: 50%;
             left: 50%;
