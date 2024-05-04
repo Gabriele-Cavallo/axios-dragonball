@@ -33,13 +33,14 @@
 
 .card{
     padding: 20px;
-    min-height: 40%;
+    min-height: 410px;
     margin: 10px 5px;
     background-color: $section-bg;
     border-radius: 20px;
     width: calc((100% / 5) - 10px);
     color: white;
     text-shadow: 1px 1px 2px $blue;
+    border: 2px solid black;
     .img-col{
         width: 50%;
         img{

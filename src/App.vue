@@ -19,20 +19,33 @@
         methods: {
             // Chiamata axios all'API di dragonball-api.com
             getInfoFromApi() {
-                axios.get ('https://dragonball-api.com/api/characters')
+                const queryParams = {
+                    limit: store.charactersLimits,
+                }
+                axios.get ('https://dragonball-api.com/api/characters', {
+                    params: queryParams
+                })
                 .then ((response) => {
                     store.charactersList = response.data.items;
                 })
-            }
+            },
+            getAllCharactersFromApi() {
+                axios.get ('https://dragonball-api.com/api/characters?limit=58')
+                .then ((response) => {
+                    store.allCharacters = response.data.items;
+                })
+            },
         },
         mounted(){
             this.getInfoFromApi();
+            this.getAllCharactersFromApi();
         }
     }
 </script>
 
 <template>
-    <AppHeader></AppHeader>
+    <!-- $emit che al change lancia la chiamata axios per modificare il numero di personaggi mostrati -->
+    <AppHeader @showMore="getInfoFromApi()"></AppHeader>
     <AppMain></AppMain>
     <AppFooter></AppFooter>
 </template>
